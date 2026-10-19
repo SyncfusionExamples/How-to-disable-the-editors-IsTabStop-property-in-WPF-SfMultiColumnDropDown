@@ -1,6 +1,6 @@
 # How-to-disable-the-editor-s-IsTabStop-property-in-WPF-SfMultiColumnDropDown
 
-In [WPF MultiColumnDropDown](https://www.syncfusion.com/wpf-controls/multi-column-dropdown) (SfMultiColumnDropDown), when you set IsTabStop to false for the SfMultiColumnDropDownControl, the editor control may still receive keyboard focus because the editor (a TextBox) inside the control has its own IsTabStop property. To prevent the editor control from receiving focus, you need to disable the IsTabStop property for both the editor control and the SfMultiColumnDropDownControl. You can access the editor control (TextBox) in the control template at runtime and set its IsTabStop to false.
+In [WPF MultiColumnDropDown](https://www.syncfusion.com/wpf-controls/multi-column-dropdown) (SfMultiColumnDropDown), when you set IsTabStop to false for the SfMultiColumnDropDownControl, the editor[...]
 
 ## Example
 
@@ -30,28 +30,13 @@ private void sfMultiColumn_Loaded(object sender, RoutedEventArgs e)
 
 ![SfMultiColumnDropDownControl IsTabStop Behaviour](SfMultiColumnDropDownControl%20IsTabStop%20Behaviour.gif)
 
-Take a moment to peruse the [WPF MultiColumnDropDown - Editing](https://help.syncfusion.com/wpf/multi-column-dropdown/editing-and-autocomplete) documentation to learn more about editing and autocomplete features, templates, and available APIs.
+Take a moment to peruse the [WPF MultiColumnDropDown - Editing](https://help.syncfusion.com/wpf/multi-column-dropdown/editing-and-autocomplete) documentation to learn more about editing and autoco[...]
 
 ---
 
 ## Purpose
 
-This sample shows how to ensure that the embedded editor (TextBox) inside a Syncfusion SfMultiColumnDropDownControl does not receive focus when tabbing through controls by disabling the IsTabStop property on both the host control and the inner editor.
-
-## Project structure
-
-- Samples/
-  - WpfSample/
-    - MainWindow.xaml
-    - MainWindow.xaml.cs
-    - App.xaml
-    - App.xaml.cs
-- Assets/
-  - SfMultiColumnDropDownControl IsTabStop Behaviour.gif
-- Docs/
-  - Additional notes or documentation snippets for the sample (optional)
-
-If your repository currently uses different folder names, adapt the above structure accordingly.
+This sample shows how to ensure that the embedded editor (TextBox) inside a Syncfusion SfMultiColumnDropDownControl does not receive focus when tabbing through controls by disabling the IsTabStop [...]
 
 ## Prerequisites
 
@@ -62,11 +47,11 @@ If your repository currently uses different folder names, adapt the above struct
 
 ## Supported versions
 
-This guidance applies to Syncfusion WPF MultiColumnDropDown controls available in recent releases (2019 and later). API names used in this sample (IsTabStop, control template structure) have been stable across typical Syncfusion WPF releases, but always verify against the specific Syncfusion package version you use (for example 19.x, 20.x, 21.x or newer).
+This guidance applies to Syncfusion WPF MultiColumnDropDown controls available in recent releases (2019 and later). API names used in this sample (IsTabStop, control template structure) have been [...]
 
 ## How it works (technical details)
 
-The SfMultiColumnDropDownControl control template contains an inner editor control (a TextBox) that can still participate in the tab order even after you set IsTabStop on the outer control to false. The sample finds the inner TextBox instance at runtime by walking the visual tree (using a helper like GridUtil.FindDescendantChildByType) and sets the inner TextBox's IsTabStop to false as well.
+The SfMultiColumnDropDownControl control template contains an inner editor control (a TextBox) that can still participate in the tab order even after you set IsTabStop on the outer control to fals[...]
 
 Tips:
 - If the control template changes in future Syncfusion versions, the search helper may need to locate the element by name or use Template.FindName on the control's template.
@@ -115,4 +100,4 @@ Contributions are welcome. Please open an issue or a pull request with a clear d
 
 ---
 
-If you want, I can also add a runnable sample (MainWindow.xaml and MainWindow.xaml.cs) targeting a specific framework (for example .NET Framework 4.8 or .NET 6/7 WPF). Tell me which target you prefer and I'll add those files.
+If you want, I can also add a runnable sample (MainWindow.xaml and MainWindow.xaml.cs) targeting a specific framework (for example .NET Framework 4.8 or .NET 6/7 WPF). Tell me which target you pr[...]
